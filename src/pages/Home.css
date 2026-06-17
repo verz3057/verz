@@ -10,7 +10,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
 }
+
 
 .hero-video {
   position: absolute;
@@ -18,6 +20,7 @@
   width: 100%;
   height: 110%;
   object-fit: cover;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -27,12 +30,12 @@
   width: 100%;
   height: 100%;
   background: rgba(10, 10, 10, 0.6);
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero-content {
   text-align: center;
-  z-index: 1;
+  z-index: 2;
   padding: 0 20px;
 }
 
@@ -48,6 +51,7 @@
   font-size: 2.5rem;
   font-family: var(--font-heading);
   margin-bottom: 1rem;
+  color: var(--accent-cyan);
 }
 
 .hero-subtitle {
