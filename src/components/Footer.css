@@ -1,5 +1,5 @@
 .footer {
-  background: var(--surface-color);
+  background: #080808;
   padding: 4rem 0 2rem;
   border-top: 1px solid rgba(255,255,255,0.05);
   margin-top: auto;
@@ -12,7 +12,7 @@
 }
 .footer-brand h2 {
   font-size: 2.5rem;
-  color: var(--accent-cyan);
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 .footer-brand p {
@@ -34,9 +34,9 @@
   color: var(--text-primary);
 }
 .social-links a:hover {
-  background: var(--accent-purple);
+  background: rgba(255, 255, 255, 0.10);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(176, 38, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.06);
 }
 .footer-links h3, .footer-contact h3 {
   font-family: var(--font-heading);
@@ -49,7 +49,7 @@
   margin-bottom: 0.8rem;
 }
 .footer-links a:hover {
-  color: var(--accent-cyan);
+  color: #ffffff;
   padding-left: 5px;
 }
 .footer-contact p {
@@ -76,3 +76,6 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+

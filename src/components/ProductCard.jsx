@@ -1,6 +1,6 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Star, Eye } from 'lucide-react';
+import { Heart, Star, Eye, ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useStore } from '../context/StoreContext';
 import './ProductCard.css';
@@ -55,18 +55,18 @@ const ProductCard = ({ product, onQuickView }) => {
         onClick={handleWishlistToggle}
         aria-label="Toggle Wishlist"
       >
-        <Heart size={20} fill={isLiked ? "var(--accent-cyan)" : "none"} color={isLiked ? "var(--accent-cyan)" : "white"} />
+        <Heart size={20} fill={isLiked ? 'white' : 'none'} color="white" strokeWidth={1.8} />
       </button>
 
       {/* Image & Quick View Wrapper */}
       <div className="product-image-wrapper">
         <Link to={productLink} className="image-link">
           <img 
-            src={product.image || product.image_url || 'https://placehold.co/400x400/1a1a2e/00f3ff?text=VERZ'} 
+            src={product.image || product.image_url || 'https://placehold.co/400x400/111111/ffffff?text=VERZ'} 
             alt={product.name} 
             className="product-image" 
             loading="lazy"
-            onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x400/1a1a2e/00f3ff?text=VERZ'; }}
+            onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x400/111111/ffffff?text=VERZ'; }}
           />
         </Link>
         {onQuickView && (
@@ -77,7 +77,7 @@ const ProductCard = ({ product, onQuickView }) => {
               onQuickView(product);
             }}
           >
-            <Eye size={16} /> Quick View
+            <Eye size={16} strokeWidth={1.8} /> Quick View
           </button>
         )}
       </div>
@@ -86,7 +86,7 @@ const ProductCard = ({ product, onQuickView }) => {
       <div className="product-info">
         <span className="product-category">{product.category}</span>
         {product.stock !== undefined && (
-          <span className="product-stock" style={{ fontSize: '0.7rem', color: product.stock > 0 ? 'var(--accent-cyan)' : 'var(--accent-pink)', marginLeft: '0.5rem' }}>
+          <span className="product-stock" style={{ fontSize: '0.7rem', color: product.stock > 0 ? 'var(--text-secondary)' : 'var(--text-primary)', marginLeft: '0.5rem' }}>
             {product.stock > 0 ? `In Stock (${product.stock})` : 'Out of Stock'}
           </span>
         )}
@@ -96,7 +96,7 @@ const ProductCard = ({ product, onQuickView }) => {
         
         {/* Star Rating Widget */}
         <div className="card-rating">
-          <Star size={14} fill="currentColor" color="var(--accent-purple)" />
+          <Star size={14} fill="none" color="white" strokeWidth={1.8} />
           <span className="rating-score">{averageRating}</span>
           <span className="rating-count">({productReviews.length || 24})</span>
         </div>
@@ -119,6 +119,7 @@ const ProductCard = ({ product, onQuickView }) => {
           className="btn-primary add-to-cart-btn card-cart-btn"
           onClick={() => addToCart(product)}
         >
+          <ShoppingCart size={16} strokeWidth={1.8} />
           Add to Cart
         </button>
       </div>

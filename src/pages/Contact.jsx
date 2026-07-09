@@ -36,8 +36,17 @@ const Contact = () => {
           <p style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
             <MapPin color="var(--accent-cyan)" /> Near Rajput Hostel, Jaipur Road, Dausa (Rajasthan) - 303303
           </p>
-          <div style={{ marginTop: 'auto', background: 'rgba(0,0,0,0.5)', height: '200px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ color: 'var(--text-secondary)' }}>Interactive Map Placeholder</span>
+          <div style={{ marginTop: 'auto', height: '220px', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.10)', background: '#050505' }}>
+            <iframe
+              title="VERZ location map"
+              src="https://www.google.com/maps?q=Near%20Rajput%20Hostel%2C%20Jaipur%20Road%2C%20Dausa%2C%20Rajasthan%20303303&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
       </div>
@@ -45,3 +54,5 @@ const Contact = () => {
   );
 };
 export default Contact;
+
+

@@ -109,7 +109,7 @@
 }
 
 .remove-btn:hover {
-  color: #ff3366;
+  color: #ffffff;
 }
 
 .cart-item-total {
@@ -188,3 +188,5 @@
     gap: 1rem;
   }
 }
+
+

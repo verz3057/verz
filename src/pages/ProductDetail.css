@@ -75,7 +75,7 @@
 
 .gallery-wishlist-btn.liked {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+  box-shadow: none;
 }
 
 .gallery-thumbnails-row {
@@ -109,7 +109,7 @@
 
 .gallery-thumb-btn.active {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+  box-shadow: none;
 }
 
 .gallery-thumb-btn img {
@@ -126,8 +126,8 @@
 }
 
 .qv-badge {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-  color: white;
+  background: #ffffff;
+  color: #050505;
   padding: 3px 8px;
   border-radius: 4px;
   font-size: 0.7rem;
@@ -195,7 +195,7 @@
 .savings-badge {
   font-size: 0.8rem;
   font-weight: 700;
-  background: rgba(0, 243, 255, 0.15);
+  background: rgba(255, 255, 255, 0.15);
   border: 1px solid var(--accent-cyan);
   color: var(--accent-cyan);
   padding: 3px 8px;
@@ -255,13 +255,13 @@
 
 .size-select-btn:hover:not(:disabled) {
   border-color: var(--accent-cyan);
-  background: rgba(0, 243, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .size-select-btn.active {
   border-color: var(--accent-cyan);
-  background: rgba(0, 243, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
 }
 
 .size-select-btn.size-out {
@@ -275,7 +275,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: #ff3333;
+  background: #ffffff;
   transform: rotate(-45deg);
 }
 
@@ -370,11 +370,12 @@
   gap: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: linear-gradient(135deg, var(--accent-purple), #ff0077) !important;
+  background: #ffffff !important;
+  color: #050505 !important;
 }
 
 .customize-live-btn:hover {
-  box-shadow: 0 10px 20px rgba(176, 38, 255, 0.4) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28) !important;
 }
 
 .disabled-btn {
@@ -390,11 +391,11 @@
 }
 
 .in-stock-label {
-  color: #00ff88;
+  color: #ffffff;
 }
 
 .out-stock-label {
-  color: #ff3366;
+  color: #ffffff;
 }
 
 .features-list {
@@ -448,8 +449,8 @@
 
 .review-success-banner {
   background: rgba(0, 255, 136, 0.1);
-  border: 1px solid #00ff88;
-  color: #00ff88;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   padding: 10px;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -643,3 +644,8 @@
     display: flex;
   }
 }
+
+
+
+
+

@@ -376,8 +376,14 @@ export const StoreProvider = ({ children }) => {
       const localCoups = localStorage.getItem('localCoupons');
       const localShip = localStorage.getItem('localShipping');
 
-      const parsedProds = localProds ? JSON.parse(localProds) : null;
-      setProducts(parsedProds && parsedProds.length > 0 ? parsedProds : initialLocalProducts);
+      const parsedProds = localProds ? JSON.parse(localProds) : [];
+      
+      // Merge cached products with any new initial local products
+      const parsedSlugs = new Set(parsedProds.map(p => p.slug || (p.name ? p.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') : '')));
+      const newLocalProducts = initialLocalProducts.filter(lp => !parsedSlugs.has(lp.slug));
+      
+      const mergedProducts = [...parsedProds, ...newLocalProducts];
+      setProducts(mergedProducts.length > 0 ? mergedProducts : initialLocalProducts);
 
       const parsedRevs = localRevs ? JSON.parse(localRevs) : null;
       setReviews(parsedRevs && parsedRevs.length > 0 ? parsedRevs : initialLocalReviews);

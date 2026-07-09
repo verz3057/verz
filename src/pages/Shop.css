@@ -11,7 +11,7 @@
 .shop-header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -47,10 +47,10 @@
   color: var(--accent-cyan);
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: rgba(0, 243, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 4px 10px;
   border-radius: 4px;
-  border: 1px solid rgba(0, 243, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: inline-block;
   margin-bottom: 1rem;
 }
@@ -101,7 +101,7 @@
 
 .search-bar-wrapper:focus-within {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.15);
+  box-shadow: none;
 }
 
 .search-input {
@@ -205,7 +205,7 @@
 .category-list button.active {
   color: var(--accent-cyan);
   padding-left: 6px;
-  text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+  text-shadow: none;
 }
 
 /* Size Badge selector */
@@ -232,8 +232,8 @@
 .size-filter-badge.selected {
   border-color: var(--accent-cyan);
   color: white;
-  background: rgba(0, 243, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
 }
 
 /* Color Circle buttons */
@@ -263,7 +263,7 @@
 .color-circle-btn.selected {
   transform: scale(1.1);
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px var(--accent-cyan);
+  box-shadow: none;
 }
 
 /* Slider */
@@ -298,9 +298,9 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: #ffffff;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+  box-shadow: none;
   transition: transform 0.1s;
 }
 
@@ -344,7 +344,7 @@
 .checkbox-label input:checked ~ .checkbox-custom {
   background: var(--accent-cyan);
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+  box-shadow: none;
 }
 
 .checkbox-custom::after {
@@ -483,7 +483,7 @@
 
 .qv-thumb.active {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+  box-shadow: none;
 }
 
 .qv-thumb img {
@@ -588,8 +588,8 @@
 .qv-size-btn:hover,
 .qv-size-btn.active {
   border-color: var(--accent-cyan);
-  background: rgba(0, 243, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
 }
 
 .qv-color-grid {
@@ -620,7 +620,7 @@
 
 .qv-details-link:hover {
   text-decoration: underline;
-  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+  text-shadow: none;
 }
 
 /* Mobile drawer and filters styling */
@@ -680,7 +680,7 @@
 
 .cat-mobile-btn.active {
   border-color: var(--accent-cyan);
-  background: rgba(0, 243, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
 }
 
@@ -696,7 +696,7 @@
 }
 
 .highlight {
-  background: rgba(0, 243, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: var(--accent-cyan);
   padding: 0 2px;
   border-radius: 2px;
@@ -734,3 +734,5 @@
     height: 280px;
   }
 }
+
+

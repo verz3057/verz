@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap');
 
 :root {
-  --bg-color: #0a0a0a;
-  --surface-color: #1a1a1a;
-  --surface-color-light: #252525;
+  --bg-color: #050505;
+  --surface-color: #111111;
+  --surface-color-light: #151515;
   --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --accent-cyan: #00f3ff;
-  --accent-purple: #b026ff;
+  --text-secondary: #A1A1A1;
+  --text-muted: #6F6F6F;
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --button-white: #FFFFFF;
+  --button-dark: #101010;
+  --accent-pink: #FFFFFF;
+  --accent-cyan: #FFFFFF;
+  --accent-purple: #FFFFFF;
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
 }
@@ -77,31 +82,37 @@ button {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-  color: #fff;
+  background: var(--button-white);
+  color: #050505;
   padding: 0.8rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  font-weight: 700;
   font-size: 1rem;
-  transition: all 0.3s ease;
-  display: inline-block;
+  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 243, 255, 0.3);
+  background: #f2f2f2;
+  border-color: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
 }
 
 .neon-text-cyan {
-  color: var(--accent-cyan);
-  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+  color: var(--text-primary);
+  text-shadow: none;
 }
 
 .neon-text-purple {
-  color: var(--accent-purple);
-  text-shadow: 0 0 10px rgba(176, 38, 255, 0.5);
+  color: var(--text-primary);
+  text-shadow: none;
 }
 
 /* Form Elements */
@@ -122,7 +133,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: var(--accent-cyan);
+  border-color: rgba(255, 255, 255, 0.42);
 }
 
 /* Animations */
@@ -141,3 +152,10 @@ select:focus {
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
+
+
+
+
+
+
+
